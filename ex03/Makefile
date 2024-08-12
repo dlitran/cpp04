@@ -1,6 +1,6 @@
 SRC_DIR = src
 SRC = $(wildcard $(SRC_DIR)/*.cpp)
-NAME = trap
+NAME = animal
 OBJ_DIR = obj
 OBJS = $(patsubst $(SRC_DIR)/%.cpp,$(OBJ_DIR)/%.o,$(SRC))
 CC = g++
