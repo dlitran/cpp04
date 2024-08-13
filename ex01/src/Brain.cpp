@@ -1,36 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlitran <dlitran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/12 15:02:49 by dlitran           #+#    #+#             */
-/*   Updated: 2024/08/13 17:45:27 by dlitran          ###   ########.fr       */
+/*   Created: 2024/08/13 17:38:56 by dlitran           #+#    #+#             */
+/*   Updated: 2024/08/13 17:40:14 by dlitran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#include "../inc/Brain.hpp"
 
-# include "Animal.hpp"
-# include "Brain.hpp"
-
-class Dog: virtual public Animal
+Brain::Brain()
 {
-	public:
-		Dog();
-		//Dog(std::string type);
-		Dog(Dog const &src);
-		Dog &operator=(Dog const &rhs);
-		~Dog();
-		void makeSound() const;
 
-	protected:
+}
 
-	private:
-		Brain *_Brain;
+Brain::Brain(const &Brain)
+{
 
-};
+}
 
-#endif
+Brain &Brain::operator=(Brain const &rhs)
+{
+
+}
+
+Brain::~Brain()
+{
+
+}

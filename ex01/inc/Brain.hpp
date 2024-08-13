@@ -6,7 +6,7 @@
 /*   By: dlitran <dlitran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/12 18:30:30 by dlitran           #+#    #+#             */
-/*   Updated: 2024/08/12 18:33:16 by dlitran          ###   ########.fr       */
+/*   Updated: 2024/08/13 17:40:52 by dlitran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,14 @@
 
 class Brain
 {
+	public:
+		Brain();
+		Brain(const Brain &src);
+		Brain &operator=(Brain const &rhs);
+		~Brain();
+		
 	protected:
-		std::string ideas[100];
+		std::string _ideas[100];
 };
 
 #endif
