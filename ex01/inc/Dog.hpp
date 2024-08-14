@@ -6,7 +6,7 @@
 /*   By: dlitran <dlitran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/12 15:02:49 by dlitran           #+#    #+#             */
-/*   Updated: 2024/08/13 17:45:27 by dlitran          ###   ########.fr       */
+/*   Updated: 2024/08/14 19:51:23 by dlitran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,14 @@ class Dog: virtual public Animal
 		//Dog(std::string type);
 		Dog(Dog const &src);
 		Dog &operator=(Dog const &rhs);
+		Brain *getBrain() const;
 		~Dog();
 		void makeSound() const;
 
 	protected:
 
 	private:
-		Brain *_Brain;
+		Brain *_brain;
 
 };
 

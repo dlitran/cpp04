@@ -6,7 +6,7 @@
 /*   By: dlitran <dlitran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/12 15:04:06 by dlitran           #+#    #+#             */
-/*   Updated: 2024/08/13 17:45:18 by dlitran          ###   ########.fr       */
+/*   Updated: 2024/08/14 19:45:53 by dlitran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class Cat: virtual public Animal
 		//Cat(std::string type);
 		Cat(Cat const &src);
 		Cat &operator=(Cat const &rhs);
+		Brain *getBrain() const;
 		~Cat();
 		void makeSound() const;
 
