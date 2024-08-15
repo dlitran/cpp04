@@ -15,33 +15,10 @@
 
 int main(void)
 {
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
+	//AAnimal a;
+	Cat	b;
 
-	delete j;//should not create a leak
-	delete i;
-
-
-	int	const array_size = 4;
-	Animal *a[array_size];
-	for (int i = 0; i < array_size; i++)
-	{
-		if (i % 2 == 0)
-			a[i] = new Cat();
-		else
-			a[i] = new Dog();
-		a[i]->makeSound();
-	}
-	for (int i = 0; i < array_size; i++)
-	{
-		delete a[i];
-	}
-	Dog b;
-	std::cout << b.getBrain()->getIdeas(0) << std::endl;
-	b.getBrain()->setIdeas(0, "Happy idea");
-	std::cout << b.getBrain()->getIdeas(0) << std::endl;
-	//Dog c = b
-	Dog c(b);
-	std::cout << c.getBrain()->getIdeas(0) << std::endl;
-
+	//a.makeSound();
+	b.makeSound();
+	return (0);
 }
