@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dlitran <dlitran@student.42.fr>            +#+  +:+       +#+        */
+/*   By: dlitran <dlitran@student.42barcelona.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/12 17:32:08 by dlitran           #+#    #+#             */
-/*   Updated: 2024/08/12 18:08:11 by dlitran          ###   ########.fr       */
+/*   Updated: 2024/08/15 13:25:23 by dlitran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,8 @@ Cat::Cat(): Animal()
 	this->_type = "Cat";
 	std::cout << "Cat default constructor called" << std::endl;
 }
-/*
-Cat::Cat(std::string type): Animal(type)
-{
-	std::cout << "Cat parameter constructor called" << std::endl;
-}
-*/
-Cat::Cat(Cat const &src): Animal()
+
+Cat::Cat(Cat const &src): Animal(src)
 {
 	std::cout << "Cat copy constructor called" << std::endl;
 	*this = src;

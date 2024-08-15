@@ -20,7 +20,6 @@ class Animal
 {
 	public:
 		Animal();
-		//Animal(std::string type);
 		Animal(Animal const &src);
 		Animal &operator=(Animal const &rhs);
 		virtual ~Animal(); //hay que declararlo como virtual para que al estar alocado de manera dinamica, delete llame al destructor correcto (base *a = new derived;)

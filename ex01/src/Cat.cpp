@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dlitran <dlitran@student.42.fr>            +#+  +:+       +#+        */
+/*   By: dlitran <dlitran@student.42barcelona.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/12 17:32:08 by dlitran           #+#    #+#             */
-/*   Updated: 2024/08/14 19:45:37 by dlitran          ###   ########.fr       */
+/*   Updated: 2024/08/15 15:16:43 by dlitran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,14 @@
 
 Cat::Cat(): Animal()
 {
-	this->_type = "Cat";
 	std::cout << "Cat default constructor called" << std::endl;
+	this->_type = "Cat";
 	this->_brain = new Brain;
+	for (int j = 0; j <= 99; j++)
+		this->_brain->setIdeas(j, "Cat idea");
 }
-/*
-Cat::Cat(std::string type): Animal(type)
-{
-	std::cout << "Cat parameter constructor called" << std::endl;
-}
-*/
-Cat::Cat(Cat const &src): Animal()
+
+Cat::Cat(Cat const &src): Animal(src)
 {
 	std::cout << "Cat copy constructor called" << std::endl;
 	*this = src;
@@ -36,7 +33,7 @@ Cat &Cat::operator=(Cat const &rhs)
 	if (this != &rhs)
 	{
 		*this->_brain = *rhs.getBrain();
-		this->_type = rhs.getType();
+		this->_type = rhs.getType(); //redundant?
 	}
 	return(*this);
 }

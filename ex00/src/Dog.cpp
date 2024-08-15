@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dlitran <dlitran@student.42.fr>            +#+  +:+       +#+        */
+/*   By: dlitran <dlitran@student.42barcelona.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/12 17:23:05 by dlitran           #+#    #+#             */
-/*   Updated: 2024/08/12 17:58:37 by dlitran          ###   ########.fr       */
+/*   Updated: 2024/08/15 13:25:41 by dlitran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,8 @@ Dog::Dog(): Animal()
 	this->_type = "Dog";
 	std::cout << "Dog default constructor called" << std::endl;
 }
-/*
-Dog::Dog(std::string type): Animal(type)
-{
-	std::cout << "Dog parameter constructor called" << std::endl;
-}
-*/
-Dog::Dog(Dog const &src): Animal()
+
+Dog::Dog(Dog const &src): Animal(src)
 {
 	std::cout << "Dog copy constructor called" << std::endl;
 	*this = src;

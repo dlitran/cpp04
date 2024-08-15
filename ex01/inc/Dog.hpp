@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dlitran <dlitran@student.42.fr>            +#+  +:+       +#+        */
+/*   By: dlitran <dlitran@student.42barcelona.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/12 15:02:49 by dlitran           #+#    #+#             */
-/*   Updated: 2024/08/14 19:51:23 by dlitran          ###   ########.fr       */
+/*   Updated: 2024/08/15 14:07:00 by dlitran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ class Dog: virtual public Animal
 {
 	public:
 		Dog();
-		//Dog(std::string type);
 		Dog(Dog const &src);
 		Dog &operator=(Dog const &rhs);
 		Brain *getBrain() const;

@@ -3,7 +3,7 @@ SRC = $(wildcard $(SRC_DIR)/*.cpp)
 NAME = animal
 OBJ_DIR = obj
 OBJS = $(patsubst $(SRC_DIR)/%.cpp,$(OBJ_DIR)/%.o,$(SRC))
-CC = g++
+CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 DEPFLAGS = -MMD -MP
 INCLUDE_DIR = inc

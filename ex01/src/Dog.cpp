@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dlitran <dlitran@student.42.fr>            +#+  +:+       +#+        */
+/*   By: dlitran <dlitran@student.42barcelona.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/12 17:23:05 by dlitran           #+#    #+#             */
-/*   Updated: 2024/08/14 19:51:35 by dlitran          ###   ########.fr       */
+/*   Updated: 2024/08/15 15:16:32 by dlitran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,17 @@
 
 Dog::Dog(): Animal()
 {
-	this->_type = "Dog";
-	new Brain();
 	std::cout << "Dog default constructor called" << std::endl;
+	this->_type = "Dog";
+	this->_brain = new Brain();
+	for (int j = 0; j <= 99; j++)
+		this->_brain->setIdeas(j, "Dog idea");
 }
-/*
-Dog::Dog(std::string type): Animal(type)
-{
-	std::cout << "Dog parameter constructor called" << std::endl;
-}
-*/
-Dog::Dog(Dog const &src): Animal()
+
+Dog::Dog(Dog const &src): Animal(src)
 {
 	std::cout << "Dog copy constructor called" << std::endl;
+	this->_brain = new Brain;
 	*this = src;
 }
 
@@ -35,13 +33,13 @@ Dog &Dog::operator=(Dog const &rhs)
 	std::cout << "Dog copy assigment operator called" << std::endl;
 	if (this != &rhs)
 	{
-		*this->_brain = *rhs.getBrain();
+		*(this->_brain) = *(rhs.getBrain());
 		this->_type = rhs.getType();
 	}
 	return(*this);
 }
 
-Brain *Dog::getBrain() const;
+Brain *Dog::getBrain() const
 {
 	return (this->_brain);
 }

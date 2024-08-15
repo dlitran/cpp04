@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dlitran <dlitran@student.42.fr>            +#+  +:+       +#+        */
+/*   By: dlitran <dlitran@student.42barcelona.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/12 15:04:06 by dlitran           #+#    #+#             */
-/*   Updated: 2024/08/14 19:45:53 by dlitran          ###   ########.fr       */
+/*   Updated: 2024/08/15 14:24:12 by dlitran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ class Cat: virtual public Animal
 {
 	public:
 		Cat();
-		//Cat(std::string type);
 		Cat(Cat const &src);
 		Cat &operator=(Cat const &rhs);
 		Brain *getBrain() const;
